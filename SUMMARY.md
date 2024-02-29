@@ -7,6 +7,7 @@
 * [Time Ordering](concepts/time-ordering.md)
 * [Data Structures](concepts/data-structures.md)
 * [Use Cases](concepts/use-cases.md)
+* [Other Resources](concepts/other-resources.md)
 
 ## Libraries
 
