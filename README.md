@@ -1,2 +1,16 @@
-# Page
+---
+description: What is the Twine Protocol?
+---
+
+# What is the Twine Protocol?
+
+<figure><img src=".gitbook/assets/Screenshot 2024-02-29 at 2.11.29 PM (1).png" alt=""><figcaption><p>A Tapestry of Twine chains</p></figcaption></figure>
+
+The **Twine protocol** specifies a method by which a decentralized group of independent parties can cooperate to produce a ledger of immutable ordered data, and it does this without requiring any kind of consensus mechanism. The authorship (i.e. provenance) of the data is verifiable using digital signatures and public key cryptography. Every chunk of data is linked via hash-chaining and the resulting data structure, which we call a **Tapestry**, forms a directed acyclic (hyper)graph (DAG). As a consequence, the data assumes a partial ordering in a cryptographically verifiable way, while also ensuring its integrity and provenance. The data becomes immutable and [non-repudiable](https://en.wikipedia.org/wiki/Non-repudiation) by any party—even its creator—due to the intertwining of data produced by independent sources.&#x20;
+
+Timestamps, like those described by the ISO 8601 standard (eg: "2024-10-31T13:59:59Z"), are the most common way to record time digitally. These are uncertified declarations of time, and their authenticity cannot be ensured. A common way of adding credibility to a timestamp associated with some data is to get the timestamp certified for that data by a trusted authority, as is done within the [RFC 3161 ](https://www.rfc-editor.org/rfc/rfc3161)Standard. At its core, this involves sending the data one wishes to timestamp to a trusted authority, which in turn returns a digital signature of the data combined with a timestamp. This digital signature serves as proof—reliant on that authority—that the data was created no later than that time. In practice, instead of sending the raw data, a hash of the data is sent instead. The hash serves as a cryptographic fingerprint of the data that reveals no information about the data itself.&#x20;
+
+There are some drawbacks to this method of timestamping, however. Firstly, one must trust the integrity of the timestamping authority, and trust that they are neither conspiring to produce inauthentic timestamps or leaking their cryptographic keys to other parties. Secondly, the timestamp only represents an upper bound after which the data could not have been produced. For example, one could imagine someone creating a piece of data and holding it for years before timestamping it in this way. To prove that a piece of data must have been created after a specific time, one can incorporate the signature (or a hash of the signature) of a prior certified timestamp into the data in question, since this could not have been known prior to signing. In other words, the data becomes a derivative of prior data, making its relative order unambiguous. This is the central idea behind hash-linking, where the hash of some previous data is incorporated into the next data, and so on.&#x20;
+
+The Twine protocol expands on this foundation, and instead of a client requesting a certified timestamp from an authority, every entity participating in the protocol certifies the timestamps of other participants. In other words, one does not need to place all their trust in a single authority’s timestamp, since that timestamp is in turn certified by another authority, and the ordering of the data is effectively unforgeable due to the properties of hash-chains.&#x20;
 
