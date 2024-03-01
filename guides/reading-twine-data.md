@@ -127,7 +127,7 @@ And you should see a list of pulse CIDs with their payloads.
 ```javascript
 import { HttpStore } from '@twine-protocol/twine-http-store'
 
-const API_URL = 'http://localhost:3000'
+const API_URL = 'https://random.colorado.edu/api'
 const store = new HttpStore(API_URL)
 
 async function listChains(){
