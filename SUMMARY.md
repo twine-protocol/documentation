@@ -9,6 +9,10 @@
 * [Use Cases](concepts/use-cases.md)
 * [Other Resources](concepts/other-resources.md)
 
+## Guides
+
+* [Reading Twine Data](guides/reading-twine-data.md)
+
 ## Libraries
 
 * [Javascript (twine-js)](libraries/javascript-twine-js.md)
