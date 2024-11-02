@@ -1,6 +1,6 @@
 # Javascript (twine-js)
 
-[Twine-js](https://github.com/twine-protocol/twine-js) is a set of libraries for interacting with twine data.
+[Twine-js](https://docs.twine.world/twine-js) is a set of libraries for interacting with twine data.
 
 There are several packages for different purposes:
 
